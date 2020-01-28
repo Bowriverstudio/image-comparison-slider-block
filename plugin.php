@@ -3,7 +3,7 @@
  * LDA\Projects
  *
  *
- * @package    MAGE\Comparison\Block
+ * @package    IMAGE\Comparison\Block
  * @since      0.1
  * @author     Maurice Tadros, Yaidel Ferralize, Disnel Rodriguez, Ernesto A. García
  * @link       https://bowriverstudio.com

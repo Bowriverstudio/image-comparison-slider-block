@@ -1,0 +1,76 @@
+// ==========================================================================
+//.uk-container-xsmall { max-width: 750px; }
+//.uk-container-small { max-width: 900px; }
+//.uk-container-large { max-width: 1600px; }
+//.uk-container-expand { max-width: none;}
+// ==========================================================================
+
+// ==========================================================================
+// |<-                            100 vw                         ->|
+// |<- dynamic margin ->|<- Container Width ->|<- dynamic margin ->|
+// |<- dynamic margin ->|   1-2     |    1-2  |<- dynamic margin ->|
+// |<- dynamic margin ->|  1-3 |  1-3 |  1-3  |<- dynamic margin ->|
+// ==========================================================================
+
+
+// 100vw - 900px (container) div / 2 (each side)
+$margin-width:#{"50vw - 450px"};
+
+@media (min-width: 960px) {
+  .fullwidth-left{
+    margin-left: calc( -1 * (#{$margin-width}) );
+  }
+  .fullwidth-right{
+    margin-right: calc(  -1 * (#{$margin-width}) );
+  }
+
+  $fullWidth-1-2: #{"50vw - 5px"};
+  .fullwidth-1-2-width{
+    width: calc(#{$fullWidth-1-2});
+    max-width: calc(#{$fullWidth-1-2});
+  }
+
+  // Assume 1500 px width:  900 container, and 600 margin
+  // Images should go from 0 - > 300 + 600 px (2/3*900) - 40px(Padding) =  900 px)
+  // Widths should be 5px less to make up for 10px margin.  445px - 10px - 445px
+  // calc(-50vw + 450px) [300px] + 600px - 10px / 2
+
+  // (Margin + 2/3 of Container - margin between images) / 2 for two images.
+  $image-width-2-3:#{"(50vw - 450px + 600px - 20px) / 2"};
+  .fullwidth-2-3-left-2-images {
+
+    .brs-image-1{
+      margin-left: calc( -1 * (#{$margin-width}) );
+      width: calc(#{$image-width-2-3});
+      max-width: calc(#{$image-width-2-3});
+    }
+
+
+    .brs-image-2{
+      // -300px in margin is because it is in the second container.
+      margin-left: calc( -1 * (#{$margin-width}) + (#{$image-width-2-3}) - 300px);
+      //margin-left: calc( -1 * (#{$margin-width}) -1 * (#{$image-width-2-3}) );
+      width: calc(#{$image-width-2-3});
+      max-width: calc(#{$image-width-2-3});
+    }
+  }
+
+  .fullwidth-2-3-right-2-images{
+    .brs-image-1{
+      width: calc(#{$image-width-2-3});
+      max-width: calc(#{$image-width-2-3});
+    }
+
+    .brs-image-2{
+      margin-left: calc(  #{$image-width-2-3} - 300px  );
+      width: calc(#{$image-width-2-3});
+      max-width: calc(#{$image-width-2-3});
+    }
+  }
+}
+
+.align-items-center{
+  align-items:center;
+}
+
+

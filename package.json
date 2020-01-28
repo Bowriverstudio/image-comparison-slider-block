@@ -1,0 +1,49 @@
+{
+  "name": "document-setting-panel",
+  "version": "1.0.0",
+  "description": "Install -------",
+  "main": "index.js",
+  "scripts": {
+    "start": "wp-scripts start",
+    "build": "wp-scripts build",
+    "build:custom": "wp-scripts build src/index.js src/frontend.js",
+    "lint:js": "wp-scripts lint-js src/index.js",
+    "lint:js-fix": "wp-scripts lint-js src/index.js --fix",
+    "lint:css": "wp-scripts lint-style '**/*.css'"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/plugin-proposal-class-properties": "^7.7.4",
+    "@wordpress/babel-preset-default": "^4.8.0",
+    "@wordpress/scripts": "^5.1.0",
+    "extract-loader": "^3.1.0",
+    "fibers": "^4.0.2",
+    "file-loader": "^5.0.2",
+    "lodash": "^4.17.15",
+    "node-sass": "^4.13.0",
+    "postcss-loader": "^3.0.0",
+    "sass": "^1.24.4",
+    "sass-loader": "^8.0.0",
+    "uikit": "^3.2.7"
+  },
+  "dependencies": {
+    "@emotion/core": "^10.0.27",
+    "@wordpress/block-editor": "^3.4.0",
+    "@wordpress/components": "^8.3.2",
+    "@wordpress/data": "^4.9.2",
+    "@wordpress/edit-post": "^3.8.5",
+    "@wordpress/editor": "^9.9.0",
+    "@wordpress/i18n": "^3.6.1",
+    "@wordpress/plugins": "^2.7.2",
+    "prop-types": "^15.7.2",
+    "proptypes": "^1.1.0"
+  },
+  "directories": {
+    "lib": "lib"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@gitlab.com:brstudio/wordpress/plugins/beans-team.git"
+  }
+}

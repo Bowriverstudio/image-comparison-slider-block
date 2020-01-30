@@ -7,7 +7,7 @@ namespace IMAGE\Comparison\Block;
  * @return string
  */
 function _get_enqueue_prefix(){
-    return 'image-comparison-slider-block-';
+    return 'image-comparison-slider-block';
 }
 
 add_action('enqueue_block_editor_assets', __NAMESPACE__.'\enqueue_block_editor_assets');

@@ -59,5 +59,5 @@ function _get_plugin_url() {
 include __DIR__ . '/lib/register-scripts.php';
 
 // Render Blocks
-include __DIR__ . '/lib/render-blocks/lightbox.php';
+//include __DIR__ . '/lib/render-blocks/lightbox.php';
 

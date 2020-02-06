@@ -12,14 +12,20 @@ class SaveComponent extends Component {
         const {attributes} = this.props;
         const imageLeft = attributes.imageLeft.url || defaultImageSrc
         const imageRight = attributes.imageRight.url || defaultImageSrc
+
+        const labelLeft = attributes.labelLeft || ''
+        const labelRight = attributes.labelRight || ''
+
+        const creditsLeft = attributes.creditsLeft || ''
+        const creditsRight = attributes.creditsRight || ''
         return (
             <div
-                id = "juxtapose-wrapper"
+                id="juxtapose-wrapper"
                 className="juxtapose"
                 data-startingposition={attributes.startingPosition}
                 data-animate={attributes.animate}>
-                <img src={imageLeft}/>
-                <img src={imageRight}/>
+                <img src={imageLeft} data-label={`${labelLeft}`}  data-credit={`${creditsLeft}`}/>
+                <img src={imageRight} data-label={`${labelRight}`}  data-credit={`${creditsRight}`} />
             </div>
         );
     }

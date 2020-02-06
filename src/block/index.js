@@ -23,21 +23,38 @@ export default registerBlockType(
         attributes: {
             imageLeft: {
                 url: '',
-                default: ''
+                default: '',
             },
             imageRight: {
                 url: '',
-                default: ''
+                default: '',
             },
-            startingPosition:
-                {
-                    type: 'number',
-                    default: 50,
-                },
-            animate:   {
+            labelLeft: {
+                type: 'text',
+                default: '',
+            },
+            labelRight: {
+                type: 'text',
+                default: '',
+            },
+
+            creditsLeft: {
+                type: 'text',
+                default: '',
+            },
+            creditsRight: {
+                type: 'text',
+                default: '',
+            },
+            startingPosition: {
+                type: 'number',
+                default: 50,
+            },
+            animate: {
                 type: 'boolean',
                 default: true,
             },
+
         },
         edit: props => {
             const {setAttributes} = props;

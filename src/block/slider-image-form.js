@@ -1,6 +1,6 @@
 import {MediaUpload, MediaUploadCheck} from "@wordpress/block-editor";
 import {Component, Fragment} from '@wordpress/element';
-import {Button, IconButton, CheckboxControl} from "@wordpress/components";
+import {Button, PanelBody, TextControl} from "@wordpress/components";
 import PropTypes from "prop-types"
 
 const ALLOWED_MEDIA_TYPES = ['image'];
@@ -30,11 +30,11 @@ class ImageComparisonSlider extends Component {
         const {sliderComparison} = this.state;
 
         return <Fragment>
-            <div>
-                <h4 className="header-slider">Slider Image Comparison</h4>
+            <div className="header-slider">
+                <h4 >Slider Image Comparison</h4>
             </div>
             <MediaUploadCheck fallback="You don't have permissions to upload images.">
-                <div className="slider-body-container">
+                <div className="slider-row ">
                     <MediaUpload
                         title={'Image Left'}
                         onSelect={media => this.handleFieldChange({url: media.url}, "imageLeft")}
@@ -54,6 +54,28 @@ class ImageComparisonSlider extends Component {
                             </Button>
                         )}
                     />
+                    <div className="slider-container-input">
+                        <TextControl
+                            style={{padding: '0 7px'}}
+                            label="Image Options"
+                            placeholder="label"
+                            value={sliderComparison.labelLeft}
+                            onChange={(value) => {
+                                this.handleFieldChange(value, "labelLeft")
+                            }}
+                        />
+                        <TextControl
+                            style={{padding: '0 7px'}}
+                            placeholder=" Credits"
+                            value={sliderComparison.creditsLeft}
+                            onChange={(value) => {
+                                this.handleFieldChange(value, "creditsLeft")
+                            }}
+                        />
+                    </div>
+                </div>
+                <div className="separator"/>
+                <div className="slider-row">
                     <MediaUpload
                         onSelect={media => this.handleFieldChange({url: media.url}, "imageRight")}
                         title={'Image Right'}
@@ -74,8 +96,29 @@ class ImageComparisonSlider extends Component {
                             </Button>
                         )}
                     />
+                    <div className="slider-container-input">
+                        <TextControl
+                            style={{padding: '0 7px'}}
+                            label="Image Options"
+                            placeholder="label"
+                            value={sliderComparison.labelRight}
+                            onChange={(value) => {
+                                this.handleFieldChange(value, "labelRight")
+                            }}
+                        />
+                        <TextControl
+                            style={{padding: '0 7px'}}
+                            placeholder="Credits"
+                            value={sliderComparison.creditsRight}
+                            onChange={(value) => {
+                                this.handleFieldChange(value, "creditsRight")
+                            }}
+                        />
+                    </div>
                 </div>
             </MediaUploadCheck>
+
+
         </Fragment>;
     }
 }

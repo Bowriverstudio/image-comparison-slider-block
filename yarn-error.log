@@ -1,0 +1,74 @@
+Arguments: 
+  C:\Program Files\nodejs\node.exe C:\Program Files (x86)\Yarn\bin\yarn.js add juxtaposejs
+
+PATH: 
+  C:\Users\USUARIO\Local Sites\sandbox\app\public\wp-content\plugins\image-comparison-slider-block\node_modules\.bin;C:\Python27\;C:\Python27\Scripts;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\ProgramData\DockerDesktop\version-bin;C:\Program Files\Docker\Docker\Resources\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\xampp\mysql\bin;C:\Program Files\Git\cmd;C:\Program Files (x86)\Google\Cloud SDK\google-cloud-sdk\bin;C:\Program Files (x86)\Yarn\bin\;C:\Program Files (x86)\nodejs\;C:\Program Files\nodejs\;C:\Users\USUARIO\AppData\Local\Microsoft\WindowsApps;C:\Users\USUARIO\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\USUARIO\AppData\Local\Yarn\bin;C:\Program Files\JetBrains\WebStorm 2018.3.4\bin;;C:\Users\USUARIO\AppData\Roaming\npm;C:\Users\USUARIO\AppData\Local\Programs\Local\resources\extraResources\lightning-services\php-7.3.5+3\bin\win32;C:\wp;
+
+Yarn version: 
+  1.17.3
+
+Node version: 
+  10.16.3
+
+Platform: 
+  win32 x64
+
+Trace: 
+  Error: EPERM: operation not permitted, unlink 'C:\Users\USUARIO\Local Sites\sandbox\app\public\wp-content\plugins\image-comparison-slider-block\node_modules\node-sass\vendor\win32-x64-64\binding.node'
+
+npm manifest: 
+  {
+    "name": "document-setting-panel",
+    "version": "1.0.0",
+    "description": "Install -------",
+    "main": "index.js",
+    "scripts": {
+      "start": "wp-scripts start",
+      "build": "wp-scripts build",
+      "build:custom": "wp-scripts build src/index.js src/frontend.js",
+      "lint:js": "wp-scripts lint-js src/index.js",
+      "lint:js-fix": "wp-scripts lint-js src/index.js --fix",
+      "lint:css": "wp-scripts lint-style '**/*.css'"
+    },
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+      "@babel/plugin-proposal-class-properties": "^7.7.4",
+      "@wordpress/babel-preset-default": "^4.8.0",
+      "@wordpress/scripts": "^5.1.0",
+      "extract-loader": "^3.1.0",
+      "fibers": "^4.0.2",
+      "file-loader": "^5.0.2",
+      "lodash": "^4.17.15",
+      "node-sass": "^4.13.0",
+      "postcss-loader": "^3.0.0",
+      "sass": "^1.24.4",
+      "sass-loader": "^8.0.0",
+      "uikit": "^3.2.7"
+    },
+    "dependencies": {
+      "@emotion/core": "^10.0.27",
+      "@wordpress/block-editor": "^3.4.0",
+      "@wordpress/components": "^8.3.2",
+      "@wordpress/data": "^4.9.2",
+      "@wordpress/edit-post": "^3.8.5",
+      "@wordpress/editor": "^9.9.0",
+      "@wordpress/i18n": "^3.6.1",
+      "@wordpress/plugins": "^2.7.2",
+      "prop-types": "^15.7.2",
+      "proptypes": "^1.1.0"
+    },
+    "directories": {
+      "lib": "lib"
+    },
+    "repository": {
+      "type": "git",
+      "url": "git@gitlab.com:brstudio/wordpress/plugins/beans-team.git"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile

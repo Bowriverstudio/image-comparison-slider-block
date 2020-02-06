@@ -1,0 +1,14 @@
+.header-slider {
+  margin: 0;
+  padding: 0; }
+
+.slider-body-container {
+  display: flex; }
+  .slider-body-container .editor-post-image-toggle {
+    align-items: center;
+    justify-content: center;
+    background-color: aliceblue;
+    border: solid 1px black;
+    width: 120px;
+    height: 150px;
+    margin: 0 10px 0 0; }

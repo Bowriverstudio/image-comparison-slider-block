@@ -1,0 +1,12 @@
+.image-slider
+{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  img{
+    //border: solid 1px black;
+    width: 150px;
+    height: 95px;
+  }
+}

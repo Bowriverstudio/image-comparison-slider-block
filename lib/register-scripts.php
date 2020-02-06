@@ -1,4 +1,5 @@
 <?php
+
 namespace IMAGE\Comparison\Block;
 
 /**
@@ -6,19 +7,21 @@ namespace IMAGE\Comparison\Block;
  *
  * @return string
  */
-function _get_enqueue_prefix(){
-    return 'image-comparison-slider-block';
+function _get_enqueue_prefix()
+{
+    return 'image-comparison-slider-block-';
 }
 
-add_action('enqueue_block_editor_assets', __NAMESPACE__.'\enqueue_block_editor_assets');
+add_action('enqueue_block_editor_assets', __NAMESPACE__ . '\enqueue_block_editor_assets');
 /**
  * Enqueue block scripts and styles in the admin editor only.
  */
-function enqueue_block_editor_assets(){
+function enqueue_block_editor_assets()
+{
     $build_url = _get_plugin_url() . 'build/';
 
     wp_enqueue_style(
-        _get_enqueue_prefix() .'editor',
+        _get_enqueue_prefix() . 'editor',
         $build_url . 'editor.css',
         '',
         filemtime(_get_plugin_directory() . 'build/editor.css')
@@ -26,14 +29,14 @@ function enqueue_block_editor_assets(){
 
     $asset_file = include(_get_plugin_directory() . 'build/index.asset.php');
     wp_enqueue_script(
-        _get_enqueue_prefix(). 'script',
+        _get_enqueue_prefix() . 'script',
         $build_url . 'index.js',
         $asset_file['dependencies'],
         $asset_file['version']
     );
 
     wp_enqueue_style(
-        _get_enqueue_prefix() .'style',
+        _get_enqueue_prefix() . 'style',
         $build_url . 'style.css',
         '',
         filemtime(_get_plugin_directory() . 'build/style.css')
@@ -66,13 +69,15 @@ function enqueue_block_editor_assets(){
 //}
 
 
-add_action( 'wp_enqueue_scripts', __NAMESPACE__.'\enqueue_scripts' );
+add_action('wp_enqueue_scripts', __NAMESPACE__ . '\enqueue_scripts');
 /**
  * Enqueue frontend only.
  */
-function enqueue_scripts(){
+function enqueue_scripts()
+{
     $asset_file = include(_get_plugin_directory() . 'build/frontend.asset.php');
     $build_url = _get_plugin_url() . 'build/';
+
     wp_enqueue_script(
         _get_enqueue_prefix() . '-frontend-script',
         $build_url . 'frontend.js',
@@ -80,10 +85,21 @@ function enqueue_scripts(){
         $asset_file['version']
     );
 
+    wp_enqueue_script(
+        'juxtapose',
+        'https://cdn.knightlab.com/libs/juxtapose/latest/js/juxtapose.min.js',
+        array(),
+        'v1.2.1',
+        true
+    );
     wp_enqueue_style(
-        _get_enqueue_prefix().'style',
+        _get_enqueue_prefix() . 'style',
         $build_url . 'style.css',
         '',
         filemtime(_get_plugin_directory() . 'build/style.css')
+    );
+    wp_enqueue_style(
+        'juxtapose',
+        'https://cdn.knightlab.com/libs/juxtapose/latest/css/juxtapose.css'
     );
 }

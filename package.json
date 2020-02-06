@@ -36,6 +36,7 @@
     "@wordpress/editor": "^9.9.0",
     "@wordpress/i18n": "^3.6.1",
     "@wordpress/plugins": "^2.7.2",
+    "juxtaposejs": "^1.1.6",
     "prop-types": "^15.7.2",
     "proptypes": "^1.1.0"
   },

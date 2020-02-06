@@ -74,7 +74,7 @@ class ImageComparisonSlider extends Component {
                         />
                     </div>
                 </div>
-                <div className="separator"/>
+                <div className="slder-separator"/>
                 <div className="slider-row">
                     <MediaUpload
                         onSelect={media => this.handleFieldChange({url: media.url}, "imageRight")}

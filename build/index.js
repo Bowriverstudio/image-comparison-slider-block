@@ -2019,7 +2019,7 @@ function (_Component) {
           _this2.handleFieldChange(value, "creditsLeft");
         }
       }))), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_7__["createElement"])("div", {
-        className: "separator"
+        className: "slder-separator"
       }), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_7__["createElement"])("div", {
         className: "slider-row"
       }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_7__["createElement"])(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_8__["MediaUpload"], {

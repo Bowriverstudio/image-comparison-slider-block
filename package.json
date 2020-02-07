@@ -45,6 +45,6 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@gitlab.com:brstudio/wordpress/plugins/beans-team.git"
+    "url": "https://github.com/Bowriverstudio/image-comparison-slider-block.git"
   }
 }

@@ -37,7 +37,6 @@ export default registerBlockType(
                 type: 'text',
                 default: '',
             },
-
             creditsLeft: {
                 type: 'text',
                 default: '',

@@ -1569,7 +1569,9 @@ function (_Component) {
   _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1___default()(SaveComponent, [{
     key: "render",
     value: function render() {
-      var attributes = this.props.attributes;
+      var _this$props = this.props,
+          attributes = _this$props.attributes,
+          className = _this$props.className;
       var imageLeft = attributes.imageLeft.url || _default_image_src__WEBPACK_IMPORTED_MODULE_7__["default"];
       var imageRight = attributes.imageRight.url || _default_image_src__WEBPACK_IMPORTED_MODULE_7__["default"];
       var labelLeft = attributes.labelLeft || '';
@@ -1578,7 +1580,7 @@ function (_Component) {
       var creditsRight = attributes.creditsRight || '';
       return Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_5__["createElement"])("div", {
         id: "juxtapose-wrapper",
-        className: "juxtapose",
+        className: "juxtapose ".concat(className),
         "data-startingposition": attributes.startingPosition,
         "data-animate": attributes.animate
       }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_5__["createElement"])("img", {
@@ -2019,16 +2021,16 @@ function (_Component) {
           _this2.handleFieldChange(value, "creditsLeft");
         }
       }))), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_7__["createElement"])("div", {
-        className: "slder-separator"
+        className: "slider-separator"
       }), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_7__["createElement"])("div", {
         className: "slider-row"
       }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_7__["createElement"])(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_8__["MediaUpload"], {
+        title: 'Image Right',
         onSelect: function onSelect(media) {
           return _this2.handleFieldChange({
             url: media.url
           }, "imageRight");
         },
-        title: 'Image Right',
         allowedTypes: ALLOWED_MEDIA_TYPES,
         value: sliderComparison.imageRight,
         render: function render(_ref2) {

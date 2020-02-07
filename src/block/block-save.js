@@ -9,7 +9,7 @@ import defaultImageSrc from './default-image-src'
  */
 class SaveComponent extends Component {
     render() {
-        const {attributes} = this.props;
+        const {attributes, className} = this.props;
         const imageLeft = attributes.imageLeft.url || defaultImageSrc
         const imageRight = attributes.imageRight.url || defaultImageSrc
 
@@ -18,14 +18,15 @@ class SaveComponent extends Component {
 
         const creditsLeft = attributes.creditsLeft || ''
         const creditsRight = attributes.creditsRight || ''
+
         return (
             <div
                 id="juxtapose-wrapper"
-                className="juxtapose"
+                className={`juxtapose ${className}`}
                 data-startingposition={attributes.startingPosition}
                 data-animate={attributes.animate}>
-                <img src={imageLeft} data-label={`${labelLeft}`}  data-credit={`${creditsLeft}`}/>
-                <img src={imageRight} data-label={`${labelRight}`}  data-credit={`${creditsRight}`} />
+                <img src={imageLeft} data-label={`${labelLeft}`} data-credit={`${creditsLeft}`}/>
+                <img src={imageRight} data-label={`${labelRight}`} data-credit={`${creditsRight}`}/>
             </div>
         );
     }

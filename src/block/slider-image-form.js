@@ -28,10 +28,9 @@ class ImageComparisonSlider extends Component {
 
     render() {
         const {sliderComparison} = this.state;
-
         return <Fragment>
             <div className="header-slider">
-                <h4 >Slider Image Comparison</h4>
+                <h4>Slider Image Comparison</h4>
             </div>
             <MediaUploadCheck fallback="You don't have permissions to upload images.">
                 <div className="slider-row ">
@@ -74,11 +73,11 @@ class ImageComparisonSlider extends Component {
                         />
                     </div>
                 </div>
-                <div className="slder-separator"/>
+                <div className="slider-separator"/>
                 <div className="slider-row">
                     <MediaUpload
-                        onSelect={media => this.handleFieldChange({url: media.url}, "imageRight")}
                         title={'Image Right'}
+                        onSelect={media => this.handleFieldChange({url: media.url}, "imageRight")}
                         allowedTypes={ALLOWED_MEDIA_TYPES}
                         value={sliderComparison.imageRight}
                         render={({open}) => (

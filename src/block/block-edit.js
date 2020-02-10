@@ -38,6 +38,7 @@ export default class Edit extends Component {
                         onSave={this.handleSave}
                     />
                 }
+
                 {
                     !isSelected &&
                     <Preview

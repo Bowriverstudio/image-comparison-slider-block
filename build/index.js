@@ -1655,7 +1655,7 @@ var registerBlockType = wp.blocks.registerBlockType;
   title: __('Slider Comparison', 'slider-image-comparison'),
   description: __('Image Comparison Slider BLocks .', 'slider-image'),
   category: 'common',
-  icon: 'groups',
+  icon: 'image-flip-horizontal',
   keywords: [__('Slider', 'image-comparison')],
   attributes: {
     imageLeft: {
